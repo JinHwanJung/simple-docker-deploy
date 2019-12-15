@@ -1,8 +1,8 @@
-# Create Docker Network
-docker network create simple_network 2>/dev/null
-
 # Build Docker Image
 docker build -t simple_server_with_docker_img .
+
+# Create Docker Network
+docker network create simple_network 2>/dev/null
 
 # Remove Container
 docker rm -f $(docker ps -a | grep "simple_server_with_docker_container" | awk "{print \$1}")
